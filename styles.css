@@ -192,7 +192,7 @@ hr {
 	width: 20px;
 	height: 25px;
 	background-color: none;
-	margin-right: 12px;
+	margin-right: 8px;
 }
 .active{
 	background-color: #e5e5e5;
@@ -204,7 +204,7 @@ hr {
 	flex: 1;
 	margin-top:40px;
 	margin-left: 200px;
-	overflow-y: scroll;
+
 }
 .filter{
 	width: calc(100vw - 200px);
@@ -264,6 +264,8 @@ hr {
 }
 .video-thumbnail img{
 	border-radius: 15px;
+	width: 100%;
+	height: auto;
 }
 
 .video-thumbnail:hover {
@@ -384,7 +386,7 @@ footer .foot{
 	display: none;
 }
 
-@media (max-width:1200px) {
+@media screen and(max-width:1200px) {
     .sidebar {
         width: 180px;
         overflow-x: hidden;
@@ -407,17 +409,21 @@ footer .foot{
 
 @media (max-width:820px) {
 		.sidebar{
-			width: 170px;
+			width: 179px;
 		}
 		.body{
 			display: flex;
 			flex-wrap: wrap;
-			width: 100%;
+			/*width: 100%;*/
 		}
 		
 		
-@media (max-width:600px) {
-
+@media screen and (max-width:480px) {
+		body{
+			overflow: hidden;
+			width: 100%;
+			height: calc(100vh - 170px);
+		}
 	  .sidebar{
 	  	display: none;
 	  }
@@ -427,18 +433,25 @@ footer .foot{
 	  		width: 100%;
 	  		margin-left: 0;
 	  		padding: 0;
+	  		overflow-x:hidden;
 	  }
     .video-wrappper{
     		display: flex;
         flex-wrap: wrap;
+        white-space: wrap;
         width: 100%;
     }
-    
+
     .video-thumbnail img{
-    	width: 100%;
-    	max-width: 580px;
     	height: 145px;
-    	object-fit:fit;
+    	max-width: 38%;
+    	/*width: 50%;
+    	height: auto;*/*/
+    	/*width: 80%;
+    	overflow: hidden;*/
+    	/*max-width: 580px;*/
+    	/*height: 145px;*/
+    	/*object-fit:fit;*/
     }
     .searchinput{
     	display: none;
@@ -452,6 +465,7 @@ footer .foot{
     .videos{
         gap: 10px;
         padding: 10px 10px;
+        max-width: 480px;
     }
     .header {
         padding-right: 10px;
