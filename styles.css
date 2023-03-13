@@ -241,7 +241,6 @@ hr {
 	border-radius: 10%;
 }
 .video-thumbnail {
-		margin-bottom: 25px;
 		position: relative;
     transition: .5s;
     width: 100%;
@@ -288,7 +287,6 @@ hr {
 
 .video-details{
 	display: flex;
-	padding-top: 12px;
 }
 .video-thumbnail:hover .channel-logo{
 	min-width: 25px;
